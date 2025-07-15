@@ -1,0 +1,80 @@
+/* 基本的なスタイリング */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 電卓全体のコンテナ */
+.calculator {
+    width: 100%;
+    max-width: 320px;
+    background-color: #2c3e50; /* ダークブルー */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: white;
+}
+
+/* ディスプレイ部分 */
+.display {
+    background-color: #1a252f;
+    padding: 25px 20px;
+    text-align: right;
+    font-size: 2.5em; /* フォントサイズを大きく */
+    font-weight: 300;
+    min-height: 60px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* ボタンのグリッドレイアウト */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* ボタン間の隙間 */
+}
+
+/* ボタンの基本スタイル */
+.btn {
+    background-color: #3b4d61; /* やや明るいブルー */
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    outline: none;
+}
+
+/* ボタンのホバーエフェクト */
+.btn:hover {
+    background-color: #4a617a;
+}
+
+/* ボタンのアクティブ（クリック時）エフェクト */
+.btn:active {
+    background-color: #5b7694;
+}
+
+/* 0ボタンを2列分に広げる */
+.zero {
+    grid-column: span 2;
+}
+
+/* オレンジ色の演算子ボタン */
+.orange {
+    background-color: #f39c12; /* オレンジ */
+}
+
+.orange:hover {
+    background-color: #f1c40f;
+}
+
+.orange:active {
+    background-color: #e67e22;
+}
